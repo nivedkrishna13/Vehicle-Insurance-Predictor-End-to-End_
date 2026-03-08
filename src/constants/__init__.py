@@ -6,6 +6,9 @@ DATABASE_NAME = "Proj1"
 COLLECTION_NAME = "Proj1-Data"
 MONGODB_URL = "mongodb+srv://nivedkrishna789_db_user:h10pkHgwM3NYW0x4@cluster0.hvi94ds.mongodb.net/?appName=Cluster0"
 MONGODB_URL_KEY = "mongodb+srv://nivedkrishna789_db_user:h10pkHgwM3NYW0x4@cluster0.hvi94ds.mongodb.net/?appName=Cluster0"
+AWS_ACCESS_KEY_ID = os.getenv("AWS_ACCESS_KEY_ID")
+AWS_SECRET_ACCESS_KEY = os.getenv("AWS_SECRET_ACCESS_KEY")
+REGION_NAME =os.getenv("AWS_DEFAULT_REGION")
 
 PIPELINE_NAME: str = ""
 ARTIFACT_DIR: str = "artifact"

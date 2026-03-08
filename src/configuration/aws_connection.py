@@ -1,8 +1,9 @@
 import boto3
 import os
-from src.constants import AWS_SECRET_ACCESS_KEY_ENV_KEY, AWS_ACCESS_KEY_ID_ENV_KEY, REGION_NAME
+from src.constants.__init__ import AWS_ACCESS_KEY_ID,AWS_SECRET_ACCESS_KEY, REGION_NAME
 
-
+AWS_ACCESS_KEY_ID_ENV_KEY = AWS_ACCESS_KEY_ID
+AWS_SECRET_ACCESS_KEY_ENV_KEY = AWS_SECRET_ACCESS_KEY
 class S3Client:
 
     s3_client=None
@@ -14,8 +15,8 @@ class S3Client:
         """
 
         if S3Client.s3_resource==None or S3Client.s3_client==None:
-            __access_key_id = os.getenv(AWS_ACCESS_KEY_ID_ENV_KEY, )
-            __secret_access_key = os.getenv(AWS_SECRET_ACCESS_KEY_ENV_KEY, )
+            __access_key_id = AWS_ACCESS_KEY_ID_ENV_KEY
+            __secret_access_key = AWS_SECRET_ACCESS_KEY_ENV_KEY
             if __access_key_id is None:
                 raise Exception(f"Environment variable: {AWS_ACCESS_KEY_ID_ENV_KEY} is not not set.")
             if __secret_access_key is None:
