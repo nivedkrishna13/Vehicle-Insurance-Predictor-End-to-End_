@@ -109,7 +109,7 @@
         >> create new key pair (name: proj1key) >> allow for https and http traffic >> storage: 30gb >> Launch
         >> Go to instance >> click on "Connect" >> Connect using EC2 Instance Connect 
         >> Connect (Terminal will be launched) 
-
+ecr uri = 827604626401.dkr.ecr.us-east-1.amazonaws.com/vehicle_insurance
 28. Open EC2 and Install docker in EC2 Machine:
       ## Optinal
       sudo apt-get update -y
